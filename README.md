@@ -6,7 +6,7 @@ Using images and examples of your code, compare the stock performance between 20
 Below I have the oringal code and the refactored code and I have the time that it took to load each. I found that the oringal code took a lot longer to load than the refactored code. 
 
 ## Original Code
-Sub AllStocksAnalysis()
+   '''Sub AllStocksAnalysis()
    '1) Format the output sheet on All Stocks Analysis worksheet
    Worksheets("All Stocks Analysis").Activate
    Range("A1").Value = "All Stocks (2018)"
@@ -50,7 +50,6 @@ Sub AllStocksAnalysis()
            If Cells(j - 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
                startingPrice = Cells(j, 6).Value
            End If
-
            '5c) get ending price for current ticker
            If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
               endingPrice = Cells(j, 6).Value
@@ -61,9 +60,7 @@ Sub AllStocksAnalysis()
        Cells(4 + i, 1).Value = ticker
        Cells(4 + i, 2).Value = TotalVolume
        Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
-
-   Next i
-
+         Next i
       'Formatting
     Worksheets("All Stocks Analysis").Activate
     Range("A3:C3").Font.FontStyle = "Bold"
@@ -82,7 +79,7 @@ Sub AllStocksAnalysis()
     Next i
     endTime = Timer
     MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
-End Sub
+'''End Sub
 ## Original Code Time
 
 ##Refactored Code
