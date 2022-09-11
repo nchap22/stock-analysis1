@@ -6,7 +6,7 @@ Using images and examples of your code, compare the stock performance between 20
 Below I have the oringal code and the refactored code and I have the time that it took to load each. I found that the oringal code took a lot longer to load than the refactored code. 
 
 ## Original Code
-   '''Sub AllStocksAnalysis()
+   ''' Sub AllStocksAnalysis()
    '1) Format the output sheet on All Stocks Analysis worksheet
    Worksheets("All Stocks Analysis").Activate
    Range("A1").Value = "All Stocks (2018)"
