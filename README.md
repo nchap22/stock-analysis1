@@ -79,10 +79,11 @@ Below I have the oringal code and the refactored code and I have the time that i
     Next i
     endTime = Timer
     MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
-'''End Sub
+End Sub
+'''
 ## Original Code Time
 
-##Refactored Code
+## Refactored Code
 Sub AllStocksAnalysisRefactored()
     Dim startTime As Single
     Dim endTime  As Single
