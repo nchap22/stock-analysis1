@@ -5,7 +5,7 @@ Steve is interested in expanding the dataset and he wants to look at the entire 
 Using images and examples of your code, compare the stock performance between 2018 and 2018, as well as the execution times of the original script and the refactored script.
 Below I have the oringal code and the refactored code and I have the time that it took to load each. I found that the oringal code took a lot longer to load than the refactored code. 
 
-## Oringal Code
+## Original Code
 Sub AllStocksAnalysis()
    '1) Format the output sheet on All Stocks Analysis worksheet
    Worksheets("All Stocks Analysis").Activate
@@ -35,13 +35,13 @@ Sub AllStocksAnalysis()
    Worksheets("2018").Activate
    '3c) Get the number of rows to loop over
    RowCount = Cells(Rows.Count, "A").End(xlUp).Row
-   '4) Loop through tickers
-   For i = 0 To 11
-       ticker = tickers(i)
-       TotalVolume = 0
-       '5) loop through rows in the data
-       Worksheets("2018").Activate
-       For j = 2 To RowCount
+       '4) Loop through tickers
+          For i = 0 To 11
+         ticker = tickers(i)
+         TotalVolume = 0
+         '5) loop through rows in the data
+          Worksheets("2018").Activate
+          For j = 2 To RowCount
            '5a) Get total volume for current ticker
            If Cells(j, 1).Value = ticker Then
                TotalVolume = TotalVolume + Cells(j, 8).Value
