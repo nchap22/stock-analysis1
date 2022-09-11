@@ -2,10 +2,12 @@
 ## Overview of Analysis
 Steve is interested in expanding the dataset and he wants to look at the entire stock market over the last couple of years (2017 and 2018).Our job is to refactor the code and to amke the code more efficient by having fewer steps and using less memorey. This way when Steve is looking up a dataset that has thousands of stocks versus only a dozen stocks, it's still running efficently and isn't taking super long to load. 
 ## Results 
-Using images and examples of your code, compare the stock performance between 2018 and 2018, as well as the execution times of the original script and the refactored script.
-Below I have the oringal code and the refactored code and I have the time that it took to load each. I found that the oringal code took a lot longer to load than the refactored code. 
+#### Using images and examples of your code, compare the stock performance between 2018 and 2018, as well as the execution times of the original script and the refactored script.
+
+Below I have the original code and the refactored code and I have the time that it took to load each. I found that the original code took longer to load than the refactored code for both years. The 2017 original code showed that it took 0.609 seconds and the refactored 2017 took 0.109 seconds. The 2018 original code showed that it took 0.6132 and the refactored code showed that it took 0.109 seconds. 
 
 ## Original Code
+
        Sub AllStocksAnalysis()
        
       '1) Format the output sheet on All Stocks Analysis worksheet
@@ -92,6 +94,7 @@ Below I have the oringal code and the refactored code and I have the time that i
                startingPrice = Cells(j, 6).Value
                
            End If
+           
            '5c) get ending price for current ticker
            
            If Cells(j + 1, 1).Value <> ticker And Cells(j, 1).Value = ticker Then
@@ -157,8 +160,6 @@ End Sub
 
 ## Original Code Time 2017
 <img width="550" alt="OriginalCode2017_TimeAmount" src="https://user-images.githubusercontent.com/110268006/189544010-b858aa13-41cf-4565-83fa-ecddbcbd9f84.png">
-
-## Refactored Code
 
 Sub AllStocksAnalysisRefactored()
 
@@ -292,7 +293,7 @@ For i = 0 To 11
     
     Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
     
-Next i
+       Next i
 
     'Formatting
     
@@ -337,6 +338,19 @@ End Sub
 
 ## Refactored Time Amount 2018
 <img width="593" alt="RefactoredCode2018_TimeAmount" src="https://user-images.githubusercontent.com/110268006/189544181-fbdfc3b1-451c-48bd-b932-9db1aa65e4a5.png">
+
+## Code Outputs
+
+
+### Code Output for 2017
+<img width="433" alt="2017 Code" src="https://user-images.githubusercontent.com/110268006/189544546-d306d7f7-02b6-4932-a8d1-14561e59876c.png">
+
+### Refactored Code Output for 2018
+<img width="352" alt="2018 refactored code" src="https://user-images.githubusercontent.com/110268006/189544599-0098d94e-ec40-4f2a-bf19-df42165a071a.png">
+
+### Original Code Output for 2018
+
+<img width="1043" alt="2018 Original Code Output" src="https://user-images.githubusercontent.com/110268006/189544608-5264fc39-13f8-40ee-8c1d-5371898a4260.png">
 
 ## Summary: In a summary statement, address the following questions.
 
