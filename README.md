@@ -366,3 +366,8 @@ End Sub
 3. Could also take more time to go through and refactor code
 
 ### How do these pros and cons apply to refactoring the original VBA script?
+Pros
+1. The efficency did increase when I refactored the code because the time it took to load icreased with the vba compared ot the original script.
+Cons
+1. It does take more time trying to refactor the code and in this challenge it took some time to understand the vba syntax for refactoring. 
+
