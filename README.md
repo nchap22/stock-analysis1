@@ -237,6 +237,7 @@ Dim tickerEndingPrices(12) As Single
     For i = 0 To 11
     
 tickerVolumes(i) = 0
+
 Next i
 
     '2b) Loop over all the rows in the spreadsheet.
@@ -254,6 +255,7 @@ Next i
             If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
             
         tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+        
     End If
     
         'End If
@@ -291,6 +293,7 @@ For i = 0 To 11
     Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
     
 Next i
+
     'Formatting
     
     Worksheets("All Stocks Analysis").Activate
@@ -304,6 +307,7 @@ Next i
     Range("C4:C15").NumberFormat = "0.0%"
     
     Columns("B").AutoFit
+    
     dataRowStart = 4
     
     dataRowEnd = 15
@@ -327,6 +331,12 @@ Next i
     MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
     
 End Sub
+
+## Refactored Time Amount 2017
+<img width="575" alt="RefactoredCode2017_TimeAmount" src="https://user-images.githubusercontent.com/110268006/189544176-3df9298f-9fda-4e34-b3c3-ff0ea1a11f19.png">
+
+## Refactored Time Amount 2018
+<img width="593" alt="RefactoredCode2018_TimeAmount" src="https://user-images.githubusercontent.com/110268006/189544181-fbdfc3b1-451c-48bd-b932-9db1aa65e4a5.png">
 
 ## Summary: In a summary statement, address the following questions.
 
